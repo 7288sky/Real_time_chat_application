@@ -6,7 +6,12 @@ function Input({
     type='text',
     className='',
     isRequired=false,
-    placeholder=''
+    placeholder='',
+
+    value='',
+    onChange=()=>{},
+
+
 }) {
   return (
     <div className='w-1/2'>
@@ -15,7 +20,7 @@ function Input({
   text-gray-900 text-sm rounded-lg focus:ring-blue-500
    focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600
     dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
-     dark:focus:border-blue-500" ${className}`}  placeholder={placeholder} required={isRequired}></input>        
+     dark:focus:border-blue-500" ${className}`}  placeholder={placeholder} required={isRequired} value={value} onChange={onChange} ></input>        
     </div>
   )
 }
